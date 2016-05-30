@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--昼-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationTitle" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morning320.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-uM-CjC">
-                                <rect key="frame" x="0.0" y="6" width="320" height="562"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning320.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-uM-CjC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Eha-uM-CjC" secondAttribute="trailing" id="1e2-oZ-i1O"/>
+                            <constraint firstItem="Eha-uM-CjC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mqu-bu-vXX"/>
+                            <constraint firstItem="Eha-uM-CjC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TYo-r2-S1H"/>
+                            <constraint firstAttribute="bottom" secondItem="Eha-uM-CjC" secondAttribute="bottom" id="en8-bV-fvy"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MsO-G9-vnI">
+                    <navigationItem key="navigationItem" title="昼" id="MsO-G9-vnI">
                         <barButtonItem key="rightBarButtonItem" title="夕方" id="d2h-r7-CwB">
                             <connections>
                                 <segue destination="uDx-26-vUT" kind="push" id="gIB-rV-4tR"/>
@@ -35,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="713" y="406"/>
         </scene>
-        <!--View Controller-->
+        <!--夕方-->
         <scene sceneID="lu9-XJ-3JT">
             <objects>
                 <viewController id="uDx-26-vUT" sceneMemberID="viewController">
@@ -47,17 +53,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="evening320.png" translatesAutoresizingMaskIntoConstraints="NO" id="s8C-hj-e6a">
-                                <rect key="frame" x="0.0" y="0.0" width="326" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="evening320.png" translatesAutoresizingMaskIntoConstraints="NO" id="s8C-hj-e6a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="s8C-hj-e6a" secondAttribute="bottom" id="Tui-Cb-ZAx"/>
+                            <constraint firstItem="s8C-hj-e6a" firstAttribute="leading" secondItem="9dj-EX-1zr" secondAttribute="leading" id="Ymg-kj-3mH"/>
+                            <constraint firstAttribute="trailing" secondItem="s8C-hj-e6a" secondAttribute="trailing" id="f4M-0F-oid"/>
+                            <constraint firstItem="s8C-hj-e6a" firstAttribute="top" secondItem="9dj-EX-1zr" secondAttribute="top" id="sA5-sh-d2v"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EPm-kz-iNC"/>
+                    <navigationItem key="navigationItem" title="夕方" id="EPm-kz-iNC">
+                        <barButtonItem key="rightBarButtonItem" title="夜" id="hnx-uX-rWj">
+                            <connections>
+                                <segue destination="BGB-8Z-F8j" kind="push" id="41j-r8-HHe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xr-Ho-Yc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1099" y="406"/>
+        </scene>
+        <!--夜-->
+        <scene sceneID="I5Z-E4-t2j">
+            <objects>
+                <viewController id="BGB-8Z-F8j" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bg9-ff-puk"/>
+                        <viewControllerLayoutGuide type="bottom" id="iA2-xD-tGO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gGc-4X-HLI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night320.png" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-gk-MfN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2zJ-gk-MfN" secondAttribute="bottom" id="Iqu-sl-sP0"/>
+                            <constraint firstItem="2zJ-gk-MfN" firstAttribute="leading" secondItem="gGc-4X-HLI" secondAttribute="leading" id="QHH-aK-Cy6"/>
+                            <constraint firstItem="2zJ-gk-MfN" firstAttribute="top" secondItem="gGc-4X-HLI" secondAttribute="top" id="qHQ-jo-Bmy"/>
+                            <constraint firstAttribute="trailing" secondItem="2zJ-gk-MfN" secondAttribute="trailing" id="rcx-1M-ONK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="夜" id="5Mg-ox-EWS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yc7-KV-7fI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1495" y="406"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vT0-PO-tAl">
@@ -81,5 +129,6 @@
     <resources>
         <image name="evening320.png" width="320" height="568"/>
         <image name="morning320.png" width="320" height="568"/>
+        <image name="night320.png" width="320" height="568"/>
     </resources>
 </document>
